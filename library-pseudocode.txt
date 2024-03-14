@@ -1,0 +1,14 @@
+// thoughts behind dialog form system
+type in information in different text boxes
+
+when you click the confirm button,
+    you gather up all of the info from all of the text
+    boxes, (maybe store them in a variable), and send
+    the correct info to the correct places in the
+    "Book" function,
+
+    then add that certain book to the addBookToLibrary
+    function
+
+    and then call the display function
+
