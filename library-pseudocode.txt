@@ -12,3 +12,59 @@ when you click the confirm button,
 
     and then call the display function
 
+// readButton thoughts 3/14/24 (trying to figure out
+how to display each piece of info, on it's own line)
+
+readButton = document.createElement('button');
+readButton.classList.add("readButton");
+
+function readBook() {
+
+    books = myLibrary[JSON.stringify(i)];
+    console.log(books.read)
+    if (books.read)
+}
+
+title = document.createElement('p')
+author = document.createElement('p')
+pages = document.createElement('p')
+readStatus = document.createElement('p')
+
+title.textContent = (`Title: ${book.title}')
+author.textContent = (`Author: ${book.author}')
+pages.textContent = (`Pages: ${book.pages}')
+readStatus.textContent = (`Read Status: ${book.read}')
+
+bookCard.appendChild(title);
+bookCard.appendChild(author);
+bookCard.appendChild(pages);
+bookCard.appendChild(readStatus);
+
+
+when you click the read button 
+    it would alter the text content of the books.read
+    to either
+        Read
+    or to
+        not read yet
+
+
+when you submit a book form
+    if (book.read == "read" || book.read == "Read") {
+        readButton.textContent = "Read"
+    }
+    if (book.read == "not read yet" ||
+    book.read == "Not read yet") {
+        readButton.textContent = "Not read yet"
+    }
+
+// error with readButton.textContent 3/15/24
+
+when you make two different cards with the read buttons
+when you click the read button on one of them, the other
+one updated instead of the one being clicked
+    I think this has to do with the readButton.
+    textContent, because it's not selecting 
+    the right card based on the the bookID. 
+
+    

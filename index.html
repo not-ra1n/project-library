@@ -13,18 +13,18 @@
     <dialog id="favDialog">
         <form action="">
             <label for="title">Title:</label>
-            <input type="text" id="title" class="bookDetails" name="title">
+            <input type="text" id="title" class="bookDetails" name="title"  autocomplete="off">
             <br>
             <label for="author">Author:</label>
-            <input type="text" id="author" class="bookDetails" name="author">
+            <input type="text" id="author" class="bookDetails" name="author"  autocomplete="off">
             <br>
             <label for="pages">Number of Pages:</label>
-            <input type="text" id="pages" class="bookDetails" name="pages">
+            <input type="text" id="pages" class="bookDetails" name="pages"  autocomplete="off">
             <br>
-            <label for="read">Read:</label>
-            <input type="text" id="read" class="bookDetails" name="read">
+            <label for="read">Read Status:</label>
+            <input type="text" id="read" class="bookDetails" name="read"  autocomplete="off">
             <div>
-                <button value="cancel" formmethod="dialog">Cancel</button>
+                <button value="cancel" id="cancelBtn" formmethod="dialog">Cancel</button>
                 <button id="confirmBtn" value="default">Confirm</button>
             </div>
         </form>

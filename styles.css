@@ -74,7 +74,21 @@ body {
 	background-color: #E7625F;
 	border: black 2px solid;
 	grid-row: 1 / 2;
-	justify-self: right;
+	grid-column: 2 / 3;
+	justify-self: end;
+	border-radius: 100px;
+}
+
+.readButton {
+	width: 100px;
+	height: 35px;
+	background-color: #FAF9F6;
+	border: black 2px solid;
+	grid-row: 1 / 2;
+	grid-column: 1 / 2;
+	justify-self: start;
+	margin-bottom: 40px;
+	border-radius: 150px;
 }
 
 .bookDetails {
@@ -86,17 +100,42 @@ body {
 }
 
 .book-card {
-	width: 200px;
-	height: 200px;
+	width: 300px;
+	height: 300px;
 	background-color: #94C973;
 	color: black;
 	display: grid;
 	border: black 2px solid;
 	border-radius: 22px;
-	grid-template-rows: 1fr 4fr;
-	justify-content: center;
-	align-items: center;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	/* justify-content: center;
+	align-items: center; */
 	margin-top: 50px;
 	margin-left: 20px;
 	padding: 10px;
+}
+
+.bookInfoTitle {
+	grid-row: 2 / 3;
+	grid-column: 1 / 3;
+	justify-self: center;
+}
+
+.bookInfoAuthor {
+	grid-row: 3 / 4;
+	grid-column: 1 / 3;
+	justify-self: center;
+}
+
+.bookInfoPages {
+	grid-row: 4 / 5;
+	grid-column: 1 / 3;
+	justify-self: center;
+}
+
+.bookInfoRead {
+	grid-row: 5 / 6;
+	grid-column: 1 / 3;
+	justify-self: center;
 }
