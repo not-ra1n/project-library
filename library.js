@@ -17,7 +17,6 @@ const HarryPotter = new Book("Jimmy", "John", 21, "not read yet")
 
 function addBookToLibrary(newBook) {
     myLibrary.push(newBook)
-    console.log(myLibrary)
 }
 
 let library = document.querySelector(".library");
@@ -63,8 +62,9 @@ function display () {
         bookCard.appendChild(pages);
         bookCard.appendChild(readStatus);
 
-        readButton = document.createElement('button');
+        let readButton = document.createElement('button');
         readButton.classList.add("readButton");
+        readButton.dataset.readButtonNum = i;
 
         if (book.read == "read" || book.read == "Read") {
             readButton.textContent = "Read"
@@ -84,15 +84,9 @@ function display () {
         function readBook() {
 
             bookID = bookCard.dataset.bookNum;
-            console.log(bookCard.dataset.bookNum)
-            console.log(myLibrary);
-            console.log(myLibrary.length);
-
-            console.log(myLibrary[bookID])
+            readButtonID = readButton.dataset.readButtonNum;
 
             bookUpdate = myLibrary[bookID];
-
-            console.log(bookUpdate.read)
 
             if (bookUpdate.read === "not read yet" 
             || bookUpdate.read === "Not read yet") {
@@ -108,8 +102,6 @@ function display () {
                 }
             }
             
-
-            console.log(myLibrary)
         }
 
         readButton.addEventListener("click", () => {
@@ -118,14 +110,9 @@ function display () {
 
         removeButton.addEventListener("click", () => {
             bookID = bookCard.dataset.bookNum;
-            console.log(bookID);
-            console.log(myLibrary);
-            console.log(myLibrary.length);
             myLibrary.splice(bookID, bookID + 1);
-            console.log(myLibrary.length);
             i = i;
-            console.log(i);
-            console.log(myLibrary);
+
 
             let libraryChild = library.lastElementChild;
             while (libraryChild) {
@@ -137,7 +124,6 @@ function display () {
         });
 
         i++;
-        console.log(i);
     }
 }
 
@@ -157,7 +143,6 @@ addNewBook.addEventListener("click", () => {
 
 
 confirmBtn.addEventListener("click", (event) => {
-    console.log(titleInput.value);
 
     addBook = new Book (titleInput.value, authorInput.value, pagesInput.value, readInput.value)
 

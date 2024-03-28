@@ -58,13 +58,7 @@ when you submit a book form
         readButton.textContent = "Not read yet"
     }
 
-// error with readButton.textContent 3/15/24
 
-when you make two different cards with the read buttons
-when you click the read button on one of them, the other
-one updated instead of the one being clicked
-    I think this has to do with the readButton.
-    textContent, because it's not selecting 
-    the right card based on the the bookID. 
-
+// continue working on overall css for dialog
+inputs and buttons (3/20/24)
     
